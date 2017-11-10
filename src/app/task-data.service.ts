@@ -29,7 +29,7 @@ export class TaskDataService {
 
   // Simulate GET /tasks
   getAllTasks(): Observable<Task[]> {
-    return this.api.getAllTasks().delay(3000);
+    return this.api.getAllTasks().delay(1000);
   }
 
   // Simulate GET /tasks/:id

@@ -1,14 +1,15 @@
-<nav class="navbar navbar-light bg-faded rounded navbar-toggleable-md">
-  <button (click)="toggleCollapse()" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#containerNavbar" aria-controls="containerNavbar"
+<nav class="navbar navbar-toggleable-md navbar-expand-lg navbar-light bg-light">
+  <button (click)="toggleCollapse()" class="navbar-toggler" 
+    type="button" data-toggle="collapse" data-target="#containerNavbar" aria-controls="containerNavbar"
     aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <!-- Banner -->
-  <a class="navbar-brand" routerLink="/" >Time Tracking App</a>
+  <a class="navbar-brand mb-0 h1" routerLink="/" >Time Tracking App</a>
 
   <div class="collapse navbar-collapse" [class.show]="show" id="containerNavbar">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
         <a class="nav-link" routerLink="/">Show Tasks
           <span class="sr-only">(current)</span>
         </a>
@@ -17,7 +18,7 @@
         <a class="nav-link" routerLink="/task">Add Task</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/task">Export Tasks</a>
+        <a class="nav-link" routerLink="/tasks/csv">Export Tasks</a>
       </li>
     </ul>
   </div>

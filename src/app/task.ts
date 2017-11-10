@@ -1,7 +1,7 @@
 export class Task {
-    id: number;
-    title = '';
-    description = '';
+    _id: number;
+    title: string;
+    description: string;
     active = false;
     started_at: Date;
     stopped_at: Date;
@@ -10,4 +10,9 @@ export class Task {
     constructor(values: Object = {}) {
         Object.assign(this, values);
     }
+
+    public get id(): number {
+        return this._id;
+    }
+
 }

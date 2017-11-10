@@ -1,5 +1,12 @@
-<div class="view">
-  <input class="toggle" type="checkbox" (click)="toggleTaskComplete(task)" [checked]="task.complete">
-  <label>{{task.title}}</label>
-  <button class="destroy" (click)="removeTask(task)"></button>
-</div>
+<section [routerLink]="[ '/tasks', task.id ]">
+
+<input 
+    type="checkbox" 
+    (click)="toggleTaskComplete(task)" 
+    [checked]="task.active">
+<label>{{task.title}}</label>
+<button 
+    class="btn btn-light glyphicon glyphicon-star" 
+    (click)="removeTask(task)">
+</button>
+</section>

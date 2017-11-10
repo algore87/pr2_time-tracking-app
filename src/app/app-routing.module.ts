@@ -1,3 +1,4 @@
+import { TaskDetailComponent } from './task-detail/task-detail.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
@@ -17,13 +18,18 @@ const routes: Routes = [
       tasks: TasksResolver
     }
   },
-  /*
-    path: 'tasks/:id,
-    component: TaskDetail
+  {
+    path: 'tasks/:id',
+    component: TaskDetailComponent,
     resolve: {
-
-    }  
-  */
+      tasks: TasksResolver
+    }
+  },
+  {
+    path: 'tasks/csv',
+    redirectTo: 'tasks?format=csv',
+    pathMatch: 'full'
+  },
   {
     path: '**',
     component: PageNotFoundComponent

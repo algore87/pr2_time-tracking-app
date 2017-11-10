@@ -7,7 +7,7 @@ import { Task } from '../task';
   styleUrls: ['./task-list-header.component.css']
 })
 export class TaskListHeaderComponent {
-
+  /* State ----- Title ----- From ----- Details */
   newTask: Task = new Task();
 
   @Output()

@@ -7,8 +7,6 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { ListviewComponent } from './listview/listview.component';
-import { DetailviewComponent } from './detailview/detailview.component';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { TasksComponent } from './tasks/tasks.component';
@@ -17,25 +15,27 @@ import { TaskListItemComponent } from './task-list-item/task-list-item.component
 import { TaskListFooterComponent } from './task-list-footer/task-list-footer.component';
 import { TaskListHeaderComponent } from './task-list-header/task-list-header.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { TaskDetailComponent } from './task-detail/task-detail.component';
+import { FlashMessageComponent } from './flash-message/flash-message.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    ListviewComponent,
-    DetailviewComponent,
     TasksComponent,
     TaskListComponent,
     TaskListItemComponent,
     TaskListFooterComponent,
     TaskListHeaderComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    TaskDetailComponent,
+    FlashMessageComponent
   ],
   imports: [
     AppRoutingModule,
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
   ],
   providers: [
     ApiService,

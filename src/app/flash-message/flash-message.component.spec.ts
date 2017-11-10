@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ListviewComponent } from './listview.component';
+import { FlashMessageComponent } from './flash-message.component';
 
-describe('ListviewComponent', () => {
-  let component: ListviewComponent;
-  let fixture: ComponentFixture<ListviewComponent>;
+describe('FlashMessageComponent', () => {
+  let component: FlashMessageComponent;
+  let fixture: ComponentFixture<FlashMessageComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ListviewComponent ]
+      declarations: [ FlashMessageComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ListviewComponent);
+    fixture = TestBed.createComponent(FlashMessageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
