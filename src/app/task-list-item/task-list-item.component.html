@@ -13,6 +13,9 @@
     <div style="padding-right: 5px">
         <i [routerLink]="[ '/tasks', task.id ]" class="fa fa-search-plus details" title="Show Task"></i>
     </div>
+    <div style="padding-right: 5px">
+        <i [routerLink]="[ '/editor', task.id ]" class="fa fa-pencil-square-o details" title="Edit Task"></i>
+    </div>
     <div (click)="removeTask(task)" style="padding-right: 10px">
         <i class="fa fa-trash-o remove" title="Remove Task"></i>
     </div>

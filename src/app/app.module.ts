@@ -17,6 +17,8 @@ import { TaskListHeaderComponent } from './task-list-header/task-list-header.com
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { TaskDetailComponent } from './task-detail/task-detail.component';
 import { FlashMessageComponent } from './flash-message/flash-message.component';
+import { TaskFormComponent } from './task-form/task-form.component';
+import { TaskEditFormComponent } from './task-edit-form/task-edit-form.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { FlashMessageComponent } from './flash-message/flash-message.component';
     TaskListHeaderComponent,
     PageNotFoundComponent,
     TaskDetailComponent,
-    FlashMessageComponent
+    FlashMessageComponent,
+    TaskFormComponent,
+    TaskEditFormComponent
   ],
   imports: [
     AppRoutingModule,

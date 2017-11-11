@@ -27,6 +27,7 @@ export class ApiService {
   }
 
   public createTask(task: Task): Observable<Task> {
+    console.log('create task: ' + task.toString());
     return this.http
       .post(API_URL + '/tasks', task)
       .map(response => {
