@@ -1,0 +1,22 @@
+label.title {
+    font-weight: bold;
+}
+
+.remove:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.taskstate {
+    color: red;
+    cursor: pointer;
+}
+
+.task-active {
+    color: green;
+}
+
+.details:hover {
+    color: black;
+    cursor: pointer;
+}

@@ -26,11 +26,6 @@ const routes: Routes = [
     }
   },
   {
-    path: 'tasks/csv',
-    redirectTo: 'tasks?format=csv',
-    pathMatch: 'full'
-  },
-  {
     path: '**',
     component: PageNotFoundComponent
   }

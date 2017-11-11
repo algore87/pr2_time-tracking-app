@@ -1,12 +1,19 @@
-<section [routerLink]="[ '/tasks', task.id ]">
-
-<input 
-    type="checkbox" 
-    (click)="toggleTaskComplete(task)" 
-    [checked]="task.active">
-<label>{{task.title}}</label>
-<button 
-    class="btn btn-light glyphicon glyphicon-star" 
-    (click)="removeTask(task)">
-</button>
+<section class="row"> <!-- [routerLink]="[ '/tasks', task.id ]" -->
+    <div class="col-0" style="padding-left: 10px">
+        <i
+        class="fa fa-circle taskstate"
+        (click)="toggleTaskComplete(task); refreshActiveTitle()" 
+        [class.task-active]="task.active"
+        [title]="activeTitle"></i>
+    </div>
+    <div class="col">
+        <label class="title">{{task.title}}</label>
+    </div>
+    <label class="col text">{{task.created_at | date}}</label>
+    <div style="padding-right: 5px">
+        <i [routerLink]="[ '/tasks', task.id ]" class="fa fa-search-plus details" title="Show Task"></i>
+    </div>
+    <div (click)="removeTask(task)" style="padding-right: 10px">
+        <i class="fa fa-trash-o remove" title="Remove Task"></i>
+    </div>
 </section>

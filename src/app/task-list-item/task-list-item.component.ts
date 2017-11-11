@@ -1,14 +1,14 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit} from '@angular/core';
 import { Task } from '../task';
 
 @Component({
   selector: 'app-task-list-item',
   templateUrl: './task-list-item.component.html',
-  styleUrls: ['./task-list-item.component.css']
+  styleUrls: ['./task-list-item.component.css'],
 })
 export class TaskListItemComponent {
-
   @Input() task: Task;
+  activeTitle = 'Task State';
 
   @Output()
   remove: EventEmitter<Task> = new EventEmitter();
@@ -27,4 +27,7 @@ export class TaskListItemComponent {
     this.remove.emit(task);
   }
 
+  refreshActiveTitle() {
+    this.activeTitle = (this.task.active) ? 'Stop Task' : 'Start Task';
+  }
 }

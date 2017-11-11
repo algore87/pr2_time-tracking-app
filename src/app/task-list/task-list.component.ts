@@ -30,4 +30,7 @@ export class TaskListComponent {
     this.remove.emit(task);
   }
 
+  onClickTaskDetails(task: Task) {
+    console.log(task.id);
+  }
 }

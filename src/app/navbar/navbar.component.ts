@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-navbar',
@@ -8,6 +9,8 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
   show = false;
+  exportCsv = environment.apiUrl + '/tasks?format=csv';
+
   toggleCollapse() {
     this.show = !this.show;
   }

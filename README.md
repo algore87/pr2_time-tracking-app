@@ -28,4 +28,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Feature
 - bootstrap 4.0.0-beta.2
-- angular-flash-alert
+- fontawesome support

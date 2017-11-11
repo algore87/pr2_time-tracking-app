@@ -20,7 +20,6 @@ export class TasksComponent implements OnInit {
   }
 
   public ngOnInit() {
-    console.log('Ok lade Tasks...');
     this.route.data
       .map((data) => data['tasks'])
       .subscribe(
