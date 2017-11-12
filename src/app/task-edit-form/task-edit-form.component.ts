@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, Input, NgModule } from '@angular/core';
 import { TaskDataService } from '../task-data.service';
 import { Task } from '../task';
 import { Observable } from 'rxjs/Observable';
@@ -14,6 +14,8 @@ export class TaskEditFormComponent implements OnInit {
   // Todo: Form population with task.fields [value]=task.title funktioniert nicht mit ngModel :/
 
   task: Observable<Task>;
+  taskToChange: Task;
+
   constructor(
     private route: ActivatedRoute,
     private router: Router,
@@ -21,10 +23,17 @@ export class TaskEditFormComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.taskToChange = this.service.getTaskById()
     this.task = this.route.paramMap
       .switchMap((params: ParamMap) =>
         this.service.getTaskById(+params.get('id')));
   }
+
   changeTask(formTask) {
+    Object.assign(this.taskToChange, formTask);
+    this.service
+      .updateTask(this.taskToChange)
+      .subscribe(
+      );
   }
 }

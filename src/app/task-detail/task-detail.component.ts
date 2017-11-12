@@ -14,6 +14,7 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 })
 export class TaskDetailComponent implements OnInit {
   task: Observable<Task>;
+  timerTicks;
 
   constructor(
     private route: ActivatedRoute,
@@ -22,8 +23,10 @@ export class TaskDetailComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+
     this.task = this.route.paramMap
       .switchMap((params: ParamMap) =>
         this.service.getTaskById(+params.get('id')));
   }
+
 }
