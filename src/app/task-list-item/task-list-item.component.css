@@ -17,6 +17,6 @@ label.title {
 }
 
 .details:hover {
-    color: black;
+    color: green;
     cursor: pointer;
 }
