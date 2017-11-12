@@ -23,17 +23,13 @@ export class TaskEditFormComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.taskToChange = this.service.getTaskById()
     this.task = this.route.paramMap
       .switchMap((params: ParamMap) =>
         this.service.getTaskById(+params.get('id')));
   }
 
   changeTask(formTask) {
-    Object.assign(this.taskToChange, formTask);
-    this.service
-      .updateTask(this.taskToChange)
-      .subscribe(
-      );
+    console.log(formTask.toString());
+    Object.assign(this.task, formTask);
   }
 }
